@@ -1,0 +1,16 @@
+○ 싱글턴 매크로 만들기
+#define 매크로명 사용할클래스이름::Get()
+
+○ Class Header에서 Singleton 선언하기
+static 클래스이름* Get()
+{
+	if (instance == nullptr)
+	{
+		instance = new PlayerData();
+	}
+
+	return instance;
+}
+
+○ Class cpp에서 Singleton instance를 nullptr로 정의하기
+클래스이름* 클래스이름::instance = nullptr;
